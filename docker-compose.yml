@@ -1,0 +1,24 @@
+version: "2"
+networks: {}
+volumes:
+  resin-data: {}
+services:
+  # MQTT broker
+  mqtt:
+    image: arm32v6/eclipse-mosquitto  
+    restart: always
+    network_mode: host
+    ports:
+      - "1883:1883"
+  # POS interface
+  pos-interface:
+    build: ./pos-interface
+    priviledged: true
+    restart: always
+    network_mode: host
+    volumes:
+      - 'resin-data:/data'
+    depends_on:
+      broker
+
+  # more to be added
