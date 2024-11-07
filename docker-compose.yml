@@ -1,8 +1,18 @@
-version: "2"
+version: "2.1"
 networks: {}
 volumes:
   resin-data: {}
 services:
+  wifi_connect:
+    build: ./wifi_connect
+    network_mode: host
+    labels:
+      - io.balena.features.dbus: '1'
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - DBUS_SYSTEM_BUS_ADDRESS:"unis:path=/host/run/dbus/system_bus_socket"
+
   # MQTT broker
   mqtt:
     image: arm32v6/eclipse-mosquitto  
