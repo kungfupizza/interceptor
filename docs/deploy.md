@@ -1,5 +1,5 @@
 To deploy a docker image onto a device follow the steps below.
-1. From [Dashboard](dashboard.balena.io) follow to the fleet and device.
+1. From [Dashboard](https://dashboard.balena-cloud.com/) follow to the fleet and device.
 2. Put the device into `local` mode by going into `Settings` menu. Note IP address of this device.
 3. On your host machine, open project `interceptor` in VSCode.
 4. On top, look for a bar tab, `Terminal`, open a new terminal.
@@ -23,4 +23,4 @@ To deploy releases, use following
    ``` bash
    balena push <fleet_name>
    ```
-4. Follow on [dashboard](dashboard.balena.io) to see live updates on the release.
+4. Follow on [dashboard](https://dashboard.balena-cloud.com/) to see live updates on the release.
