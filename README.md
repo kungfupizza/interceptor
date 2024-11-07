@@ -12,3 +12,4 @@ Development requisites are noted [here](./docs/prereqs.md)
 Check how to deploy [documentdation](./docs/deploy.md).
 
 ## Architecture
+Please see [Architecture folder](./docs/arch/output/) for detailed images, lebelled by their name.
